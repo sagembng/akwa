@@ -21,7 +21,7 @@ Water refill, container swap and station pickup requests for customers, with an 
 | --- | --- |
 | Frontend | React 19, TypeScript, Vite, lucide-react |
 | Backend | Node.js, Hono, TypeScript (run with tsx) |
-| Database | PostgreSQL: embedded PGlite for local use, Neon or Supabase via `pg` in production |
+| Database | PostgreSQL: embedded PGlite for local use, Neon (serverless Postgres) via `pg` in production |
 | Testing | Vitest |
 | Hosting | Render (web service) |
 
@@ -43,7 +43,7 @@ With no configuration, the app uses an embedded Postgres stored in `.data/`, so 
 Akwa runs as one Node process that serves both the built site and the API, so it fits any host that runs Node.
 
 1. Push the repository to GitHub.
-2. Create a Postgres database ([Neon](https://neon.com) or [Supabase](https://supabase.com)) and copy its connection string.
+2. Create a Postgres database ([Neon](https://neon.com)) and copy its connection string.
 3. Create a web service on a Node host such as [Render](https://render.com) with these commands. The build step needs the dev dependencies, so keep `--include=dev` when `NODE_ENV=production` is set:
 
    | Setting | Value |
