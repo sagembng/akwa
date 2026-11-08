@@ -33,7 +33,7 @@ The API tests run real SQL on the embedded database. To run them on another Post
   | Akwa Kapitolyo | `admin.kapitolyo@akwa.example` |
   | Akwa Poblacion | `admin.poblacion@akwa.example` |
 
-  Emails and the shared password are in `server/config.ts`. Anyone who can read this repository can see them, so set `ADMIN_PASSWORD` (and the `ADMIN_<BRANCH>_EMAIL` variables) on a public deployment. Any older single admin account is removed at startup.
+  Emails and the default password are in `server/config.ts`. Anyone who can read this repository can see them, so set `ADMIN_MAGINHAWA_PASSWORD`, `ADMIN_KAPITOLYO_PASSWORD` and `ADMIN_POBLACION_PASSWORD` so each branch has its own password (`ADMIN_PASSWORD` is a shared fallback; `ADMIN_<BRANCH>_EMAIL` changes the emails) on a public deployment. Any older single admin account is removed at startup.
 
 ## Delivery fee
 

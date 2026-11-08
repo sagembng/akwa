@@ -1,7 +1,7 @@
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { createApp } from './app';
 import { connectEmbedded, connectPostgres, migrate, type Db } from './db';
-import { ADMINS, ADMIN_PASSWORD, DEMO_EMAIL, DEMO_PASSWORD } from './config';
+import { ADMINS, DEMO_EMAIL, DEMO_PASSWORD } from './config';
 import { WINDOW_CAPACITY } from '../src/data';
 
 // Real SQL against embedded Postgres, with the clock fixed to a Monday morning in Manila.
@@ -43,8 +43,8 @@ async function customer() {
 // A branch admin. The default matches the branch of orderBody().
 async function admin(branchId = 'maginhawa') {
   const client = new Client();
-  const email = ADMINS.find((a) => a.branchId === branchId)!.email;
-  const res = await client.call('POST', '/api/auth/login', { email, password: ADMIN_PASSWORD });
+  const admin = ADMINS.find((a) => a.branchId === branchId)!;
+  const res = await client.call('POST', '/api/auth/login', { email: admin.email, password: admin.password });
   expect(res.status).toBe(200);
   return client;
 }

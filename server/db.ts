@@ -1,5 +1,5 @@
 import { hashPassword } from './security';
-import { ADMINS, ADMIN_PASSWORD, DEMO_EMAIL, DEMO_PASSWORD } from './config';
+import { ADMINS, DEMO_EMAIL, DEMO_PASSWORD } from './config';
 
 export interface Queryable {
   query<T = Record<string, any>>(sql: string, params?: unknown[]): Promise<T[]>;
@@ -142,8 +142,8 @@ UPDATE saved_details SET street = address WHERE house = '' AND street = '' AND b
 
 export async function migrate(db: Db) {
   await db.exec(SCHEMA);
-  const adminHash = await hashPassword(ADMIN_PASSWORD);
   for (const admin of ADMINS) {
+    const adminHash = await hashPassword(admin.password);
     await db.query(
       `INSERT INTO users (name, email, phone, role, branch_id, password_hash, privacy_accepted_at)
        VALUES ($1, $2, '', 'admin', $3, $4, now())

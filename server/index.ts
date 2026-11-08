@@ -23,8 +23,12 @@ if (url) {
 }
 await migrate(db);
 
-if (process.env.NODE_ENV === 'production' && !process.env.ADMIN_PASSWORD) {
-  console.warn('WARNING: ADMIN_PASSWORD is not set. The default admin password is public in the repository.');
+if (process.env.NODE_ENV === 'production') {
+  for (const b of ['MAGINHAWA', 'KAPITOLYO', 'POBLACION']) {
+    if (!process.env[`ADMIN_${b}_PASSWORD`] && !process.env.ADMIN_PASSWORD) {
+      console.warn(`WARNING: ADMIN_${b}_PASSWORD is not set. The default admin password is public in the repository.`);
+    }
+  }
 }
 
 const app = createApp(db);
