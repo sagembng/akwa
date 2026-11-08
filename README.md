@@ -2,6 +2,8 @@
 
 Water refill, container swap and station pickup requests for customers, with an order board for admins.
 
+**Live site:** https://akwa-h2kk.onrender.com (the free host sleeps when idle, so the first visit can take about 30 seconds).
+
 ```bash
 npm install
 npm run dev
