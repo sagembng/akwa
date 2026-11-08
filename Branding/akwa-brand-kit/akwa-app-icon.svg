@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Akwa app icon</title>
+  <desc id="desc">A geometric A monogram fused with a water droplet on a deep hydro navy rounded square.</desc>
+  <defs>
+    <linearGradient id="akwaIconGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F3D56"/>
+      <stop offset="1" stop-color="#0B293B"/>
+    </linearGradient>
+    <linearGradient id="akwaDropGradient" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#BCEFF5"/>
+      <stop offset="1" stop-color="#21C7D9"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="480" height="480" rx="116" fill="url(#akwaIconGradient)"/>
+  <path d="M256 86 116 414h72l28-68h80l28 68h72L256 86Zm0 113 24 90h-48l24-90Z" fill="#FFFFFF"/>
+  <path d="M365 144c-34 43-59 78-59 116 0 42 29 75 67 75s67-33 67-75c0-38-25-73-59-116a10 10 0 0 0-16 0Z" fill="url(#akwaDropGradient)"/>
+  <path d="M337 253c4-22 18-45 35-69" fill="none" stroke="#FFFFFF" stroke-opacity=".72" stroke-width="12" stroke-linecap="round"/>
+</svg>

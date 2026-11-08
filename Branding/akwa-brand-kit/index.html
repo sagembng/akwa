@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Akwa — Brand Styleguide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { akwa: { navy:'#0F3D56', cyan:'#21C7D9', ice:'#BCEFF5', slateWhite:'#F4F8FA', slate:'#0F172A', muted:'#526575', border:'#D4E3E8', success:'#0F8A6A', warning:'#A15C00', error:'#B42318' } },
+        fontFamily: { display:['Plus Jakarta Sans','ui-sans-serif','system-ui'], body:['Inter','ui-sans-serif','system-ui'] }
+      }}
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#0F3D56; --cyan:#21C7D9; --ice:#BCEFF5; --bg:#F4F8FA; --slate:#0F172A; --muted:#526575; --border:#D4E3E8; --success:#0F8A6A; --warning:#A15C00; --error:#B42318; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--slate); font-family:Inter,system-ui,sans-serif; }
+    .display, h1, h2, h3 { font-family:'Plus Jakarta Sans',system-ui,sans-serif; }
+    .swatch { min-height:132px; border-radius:18px; padding:16px; display:flex; flex-direction:column; justify-content:space-between; }
+    .logo-panel { min-height:220px; border:1px solid var(--border); border-radius:20px; display:flex; align-items:center; justify-content:center; background:white; padding:24px; }
+    .focus-ring:focus-visible, button:focus-visible { outline:3px solid var(--cyan); outline-offset:3px; }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior:auto !important; transition:none !important; } }
+  </style>
+</head>
+<body>
+  <main class="mx-auto max-w-7xl px-5 py-8 sm:px-8 lg:py-14">
+    <header class="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div>
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full bg-akwa-ice px-3 py-1 text-xs font-medium tracking-wide text-akwa-navy"><span class="h-2 w-2 rounded-full bg-akwa-cyan"></span>AKWA / BRAND SYSTEM 01</div>
+        <h1 class="display text-5xl font-bold tracking-tight text-akwa-navy sm:text-6xl">Water, right<br><span class="text-akwa-cyan">when you need it.</span></h1>
+        <p class="mt-5 max-w-xl text-lg leading-8 text-akwa-muted">A production-ready foundation for on-demand refills, scheduled delivery, container swaps, and station discovery.</p>
+      </div>
+      <div class="rounded-2xl bg-akwa-navy p-5 text-white shadow-xl shadow-akwa-navy/15 lg:max-w-xs"><div class="mb-4 flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-xl bg-akwa-cyan text-akwa-navy font-bold">A</span><span class="font-display text-xl font-bold">Akwa</span></div><p class="text-sm leading-6 text-akwa-ice">Pure hydration delivered with total logistical reliability.</p></div>
+    </header>
+
+    <section class="mb-12" aria-labelledby="colors-title">
+      <div class="mb-5 flex items-end justify-between gap-4"><div><p class="mb-2 text-xs font-medium uppercase tracking-[.18em] text-akwa-muted">02 / foundations</p><h2 id="colors-title" class="text-3xl font-bold text-akwa-navy">Color system</h2></div><p class="hidden text-right text-sm text-akwa-muted sm:block">Accessible by default.<br>Expressive where it counts.</p></div>
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div class="swatch bg-akwa-navy text-white"><span class="text-sm font-medium">Deep Hydro Navy</span><span><strong>#0F3D56</strong><small class="block text-akwa-ice">11.52:1 on white</small></span></div>
+        <div class="swatch bg-akwa-cyan text-akwa-navy"><span class="text-sm font-medium">Electric Cyan</span><span><strong>#21C7D9</strong><small class="block">8.70:1 on navy</small></span></div>
+        <div class="swatch border border-akwa-border bg-white"><span class="text-sm font-medium">Pure Clean White</span><span><strong>#FFFFFF</strong><small class="block text-akwa-muted">17.85:1 on slate</small></span></div>
+        <div class="swatch bg-akwa-slateWhite"><span class="text-sm font-medium">Cool Slate White</span><span><strong>#F4F8FA</strong><small class="block text-akwa-muted">Surface only</small></span></div>
+        <div class="swatch bg-akwa-slate text-white"><span class="text-sm font-medium">Deep Slate</span><span><strong>#0F172A</strong><small class="block text-slate-300">17.85:1 on white</small></span></div>
+      </div>
+      <div class="mt-3 grid grid-cols-3 gap-3 sm:grid-cols-6">
+        <div class="rounded-xl bg-akwa-success p-3 text-xs font-medium text-white">Success<br><b>#0F8A6A</b></div>
+        <div class="rounded-xl bg-akwa-warning p-3 text-xs font-medium text-white">Warning<br><b>#A15C00</b></div>
+        <div class="rounded-xl bg-akwa-error p-3 text-xs font-medium text-white">Error<br><b>#B42318</b></div>
+        <div class="rounded-xl bg-akwa-ice p-3 text-xs font-medium text-akwa-navy">Ice Blue<br><b>#BCEFF5</b></div>
+        <div class="rounded-xl bg-akwa-muted p-3 text-xs font-medium text-white">Muted Slate<br><b>#526575</b></div>
+        <div class="rounded-xl border border-akwa-border bg-white p-3 text-xs font-medium text-akwa-slate">Border<br><b>#D4E3E8</b></div>
+      </div>
+    </section>
+
+    <section class="mb-12 grid gap-8 lg:grid-cols-[1.1fr_.9fr]" aria-labelledby="type-title">
+      <div><p class="mb-2 text-xs font-medium uppercase tracking-[.18em] text-akwa-muted">03 / hierarchy</p><h2 id="type-title" class="mb-6 text-3xl font-bold text-akwa-navy">Typography that moves fast</h2><div class="space-y-6 rounded-3xl bg-white p-6 shadow-sm sm:p-8"><div><p class="mb-2 text-xs uppercase tracking-wider text-akwa-muted">Display / Plus Jakarta Sans 700 / 48px</p><div class="display text-5xl font-bold tracking-tight text-akwa-navy">Refill made simple.</div></div><div><p class="mb-2 text-xs uppercase tracking-wider text-akwa-muted">H2 / Plus Jakarta Sans 700 / 28px</p><h3 class="text-3xl font-bold text-akwa-navy">Your water, on schedule.</h3></div><div><p class="mb-2 text-xs uppercase tracking-wider text-akwa-muted">Body-lg / Inter 400 / 18px</p><p class="text-lg leading-8 text-akwa-muted">Choose a nearby station, book a delivery, and keep every container accounted for.</p></div><div><p class="mb-2 text-xs uppercase tracking-wider text-akwa-muted">Caption / Inter 500 / 12px</p><p class="text-xs font-medium uppercase tracking-widest text-akwa-muted">DELIVERY STATUS · READY TO REFILL</p></div></div></div>
+      <div><p class="mb-2 text-xs font-medium uppercase tracking-[.18em] text-akwa-muted">04 / marks</p><h2 class="mb-6 text-3xl font-bold text-akwa-navy">Logo family</h2><div class="space-y-3"><div class="logo-panel bg-akwa-navy"><svg viewBox="0 0 512 512" class="h-40 w-40" aria-label="Akwa app icon"><rect x="16" y="16" width="480" height="480" rx="116" fill="#0F3D56"/><path d="M256 86 116 414h72l28-68h80l28 68h72L256 86Zm0 113 24 90h-48l24-90Z" fill="#fff"/><path d="M365 144c-34 43-59 78-59 116 0 42 29 75 67 75s67-33 67-75c0-38-25-73-59-116a10 10 0 0 0-16 0Z" fill="#21C7D9"/></svg></div><div class="logo-panel"><svg viewBox="0 0 800 200" class="w-full" aria-label="Akwa wordmark"><rect x="20" y="20" width="160" height="160" rx="40" fill="#0F3D56"/><path d="M80 30 34 138h25l9-23h24l9 23h25L80 30Zm0 37 8 29H72l8-29Z" fill="#fff"/><path d="M116 49c-12 15-19 27-19 39 0 14 9 25 22 25s22-11 22-25c0-12-7-24-19-39a4 4 0 0 0-6 0Z" fill="#21C7D9"/><text x="222" y="132" fill="#0F3D56" font-family="Arial,sans-serif" font-size="108" font-weight="700">Akwa</text></svg></div><div class="logo-panel bg-black"><svg viewBox="0 0 512 512" class="h-32 w-32" aria-label="Akwa monochrome stamp"><rect width="512" height="512" rx="96" fill="#fff"/><path d="M256 86 116 414h72l28-68h80l28 68h72L256 86Zm0 113 24 90h-48l24-90Z" fill="#000"/><path d="M365 144c-34 43-59 78-59 116 0 42 29 75 67 75s67-33 67-75c0-38-25-73-59-116a10 10 0 0 0-16 0Z" fill="#000"/></svg></div></div></div>
+    </section>
+
+    <section aria-labelledby="component-title"><p class="mb-2 text-xs font-medium uppercase tracking-[.18em] text-akwa-muted">05 / component preview</p><h2 id="component-title" class="mb-6 text-3xl font-bold text-akwa-navy">5-gallon refill order</h2><div class="grid gap-6 lg:grid-cols-[1fr_360px]"><div class="rounded-3xl bg-akwa-navy p-6 text-white sm:p-8"><div class="flex items-start justify-between gap-4"><div><p class="mb-2 text-sm font-medium text-akwa-ice">NEXT DELIVERY</p><h3 class="text-2xl font-bold">Crystal clear refill</h3><p class="mt-2 text-sm text-akwa-ice">Friday, 14 June · 10:00–12:00</p></div><span class="rounded-full bg-akwa-cyan px-3 py-1 text-xs font-bold text-akwa-navy">SCHEDULED</span></div><div class="my-8 h-px bg-white/15"></div><div class="flex items-center justify-between"><div><p class="text-sm text-akwa-ice">Container size</p><p class="mt-1 text-lg font-semibold">5 gallons</p></div><div class="flex items-center gap-2 rounded-2xl bg-white/10 p-1"><button class="focus-ring h-11 w-11 rounded-xl text-2xl text-akwa-ice hover:bg-white/10" aria-label="Decrease quantity">−</button><span class="w-8 text-center font-semibold">2</span><button class="focus-ring h-11 w-11 rounded-xl bg-akwa-cyan text-2xl text-akwa-navy" aria-label="Increase quantity">+</button></div></div><div class="mt-8 flex items-end justify-between"><div><p class="text-sm text-akwa-ice">Total today</p><p class="mt-1 text-3xl font-bold">$18.00</p></div><button class="focus-ring rounded-2xl bg-white px-5 py-3 font-semibold text-akwa-navy transition hover:bg-akwa-ice">Order Delivery <span aria-hidden="true">→</span></button></div></div><aside class="rounded-3xl border border-akwa-border bg-white p-6"><p class="mb-5 text-sm font-medium text-akwa-muted">ORDER SUMMARY</p><div class="space-y-4 text-sm"><div class="flex justify-between"><span class="text-akwa-muted">Refill × 2</span><strong>$16.00</strong></div><div class="flex justify-between"><span class="text-akwa-muted">Service fee</span><strong>$2.00</strong></div><div class="h-px bg-akwa-border"></div><div class="flex justify-between text-base"><span class="font-medium">Total</span><strong class="text-akwa-navy">$18.00</strong></div></div><div class="mt-6 rounded-2xl bg-akwa-slateWhite p-4"><div class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-akwa-success"></span><div><p class="font-medium">Station capacity confirmed</p><p class="mt-1 text-xs text-akwa-muted">2 containers reserved for you.</p></div></div></div></aside></div></section>
+
+    <footer class="mt-14 border-t border-akwa-border pt-6 text-sm text-akwa-muted"><div class="flex flex-col justify-between gap-3 sm:flex-row"><span>Akwa design system · v1.0</span><span>Built for pure, dependable utility.</span></div></footer>
+  </main>
+</body>
+</html>

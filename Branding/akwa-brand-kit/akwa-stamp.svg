@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Akwa monochrome stamp</title>
+  <desc id="desc">A black and white geometric Akwa A-and-droplet mark for bottle caps, receipts, and jug heat stamps.</desc>
+  <rect width="512" height="512" rx="96" fill="#FFFFFF"/>
+  <path d="M256 86 116 414h72l28-68h80l28 68h72L256 86Zm0 113 24 90h-48l24-90Z" fill="#000000"/>
+  <path d="M365 144c-34 43-59 78-59 116 0 42 29 75 67 75s67-33 67-75c0-38-25-73-59-116a10 10 0 0 0-16 0Z" fill="#000000"/>
+  <path d="M337 253c4-22 18-45 35-69" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+</svg>

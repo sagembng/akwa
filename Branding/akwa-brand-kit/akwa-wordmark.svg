@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200" role="img" aria-labelledby="title desc">
+  <title id="title">Akwa horizontal wordmark</title>
+  <desc id="desc">Akwa app emblem paired with a clean geometric wordmark.</desc>
+  <defs>
+    <linearGradient id="wordmarkDrop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#BCEFF5"/>
+      <stop offset="1" stop-color="#21C7D9"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="none"/>
+  <g transform="translate(20 20)">
+    <rect width="160" height="160" rx="40" fill="#0F3D56"/>
+    <path d="M80 30 34 138h25l9-23h24l9 23h25L80 30Zm0 37 8 29H72l8-29Z" fill="#FFFFFF"/>
+    <path d="M116 49c-12 15-19 27-19 39 0 14 9 25 22 25s22-11 22-25c0-12-7-24-19-39a4 4 0 0 0-6 0Z" fill="url(#wordmarkDrop)"/>
+  </g>
+  <text x="222" y="132" fill="#0F3D56" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="108" font-weight="700" letter-spacing="-5">Akwa</text>
+</svg>

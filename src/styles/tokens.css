@@ -1,0 +1,44 @@
+:root {
+  /* Brand core */
+  --akwa-deep-hydro-navy: #0F3D56;
+  --akwa-deep-hydro-navy-rgb: 15, 61, 86;
+  --akwa-electric-cyan: #21C7D9;
+  --akwa-electric-cyan-rgb: 33, 199, 217;
+  --akwa-ice-blue: #BCEFF5;
+  --akwa-ice-blue-rgb: 188, 239, 245;
+
+  /* Surfaces and text */
+  --akwa-clean-white: #FFFFFF;
+  --akwa-slate-white: #F4F8FA;
+  --akwa-mist-blue: #E6F1F5;
+  --akwa-deep-slate: #0F172A;
+  --akwa-muted-slate: #526575;
+  --akwa-border: #D4E3E8;
+
+  /* Semantic feedback */
+  --akwa-success: #0F8A6A;
+  --akwa-warning: #A15C00;
+  --akwa-error: #B42318;
+  --akwa-info: #0F3D56;
+
+  /* Typography */
+  --akwa-font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --akwa-font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Layout */
+  --akwa-radius-sm: 10px;
+  --akwa-radius-md: 16px;
+  --akwa-radius-lg: 24px;
+  --akwa-shadow-sm: 0 1px 3px rgb(15 61 86 / 0.08);
+  --akwa-shadow-md: 0 12px 32px rgb(15 61 86 / 0.12);
+}
+
+/* WCAG AA usage notes:
+   - Deep Hydro Navy on white: 11.52:1 (AA for normal text)
+   - Deep Slate on white: 17.85:1 (AA for normal text)
+   - Electric Cyan on Deep Hydro Navy: 8.70:1 (AA for normal text)
+   - Electric Cyan on white: 2.05:1 (decorative or large text only)
+   - Success on white: 4.32:1 (AA for normal text)
+   - Warning on white: 5.19:1 (AA for normal text)
+   - Error on white: 6.57:1 (AA for normal text)
+*/
