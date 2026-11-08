@@ -13,6 +13,32 @@ This starts the site on http://localhost:5173 and the API on http://localhost:87
 
 With no configuration, the app uses an embedded Postgres stored in `.data/`, so it runs straight away. To use [Neon](https://neon.com), copy `.env.example` to `.env`, paste your connection string as `DATABASE_URL`, and restart. Tables and the admin account are created at startup.
 
+## Deployment
+
+Akwa runs as one Node process that serves both the built site and the API, so it fits any host that runs Node.
+
+1. Push the repository to GitHub.
+2. Create a Postgres database ([Neon](https://neon.com) or [Supabase](https://supabase.com)) and copy its connection string.
+3. Create a web service on a Node host such as [Render](https://render.com) with these commands. The build step needs the dev dependencies, so keep `--include=dev` when `NODE_ENV=production` is set:
+
+   | Setting | Value |
+   | --- | --- |
+   | Build command | `npm install --include=dev && npm run build` |
+   | Start command | `npm start` |
+
+4. Set these environment variables on the host (never commit them):
+
+   | Variable | Purpose |
+   | --- | --- |
+   | `NODE_ENV` | `production` |
+   | `DATABASE_URL` | Postgres connection string |
+   | `ADMIN_MAGINHAWA_PASSWORD`, `ADMIN_KAPITOLYO_PASSWORD`, `ADMIN_POBLACION_PASSWORD` | One password per branch admin |
+   | `PORT` | Set by most hosts automatically |
+
+5. Open the site, then log in as each branch admin to confirm the passwords work.
+
+The server logs a warning at startup if a branch admin still uses the public default password. Free hosting plans may sleep when idle, so the first visit can be slow.
+
 ## Tests
 
 ```bash
@@ -62,3 +88,7 @@ Mobile numbers must be exactly 11 digits starting with `09` (`+63` is accepted a
 ## Scope
 
 Akwa is a portfolio demo: no water is delivered and no money moves, so use made-up details. It has no email sending, so there is no email confirmation or password reset. Prices and branches are sample data in `src/data.ts`, and the same file is used by the browser and the server. The maps use Google's keyless embed, which shows one pin per map. A Maps API key would allow every branch on one map.
+
+## Credits
+
+Built by Xavier Imbang with the help of [Claude](https://claude.com/claude-code) by Anthropic, an AI coding assistant.
